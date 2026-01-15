@@ -2,25 +2,41 @@
 import Layout from "../layouts/BaseLayout.astro";
 ---
 
-<Layout title="About | Squigi’s Pizza of Griffith">
-  <section class="mx-auto max-w-4xl px-4 py-12">
-    <h1 class="text-3xl font-bold mb-6 text-center">About Squigi’s</h1>
+<Layout title="About Squigi’s Pizza of Griffith">
 
-    <div class="space-y-4 text-lg">
+  <section class="max-w-6xl mx-auto px-4 py-16 flex flex-col md:flex-row items-center gap-8">
+    <!-- Image with Hover Effect -->
+    <div class="md:w-auto flex justify-center overflow-hidden rounded-lg shadow-lg">
+      <img 
+        src="./images/gallery-2.jpg" 
+        alt="Squigi’s Pizza of Griffith Building" 
+        class="w-full max-w-sm object-cover transform transition-transform duration-500 hover:scale-105"
+      />
+    </div>
+
+    <!-- Text -->
+    <div class="md:w-1/2 space-y-4">
+      <h1 class="text-3xl font-bold">Our Story</h1>
       <p>
-        Squigi’s Pizza of Griffith is a family-owned pizzeria proudly serving the
-        Griffith community with classic pizza and Italian favorites.
+        Squigi’s Pizza of Griffith has been a family-owned tradition for over 20 years. We take pride in crafting fresh, delicious pizzas and Italian favorites for our community.
+      </p>
+      <p>
+        Our team is dedicated to providing friendly service, quality ingredients, and a warm dining experience for everyone who visits. Whether you’re here for a quick carryout or a family dinner, we treat you like part of the family.
+      </p>
+      <p>
+        Come by and see why Squigi’s Pizza has been a local favorite for decades!
       </p>
 
-      <p>
-        From our fresh dough and house sauce to our friendly, hometown service,
-        we believe great food brings people together.
-      </p>
-
-      <p>
-        Join us for dine-in, carryout, or delivery — and thank you for supporting
-        local.
-      </p>
+      <!-- CTA Button -->
+      <div class="mt-6">
+        <a 
+          href="./menu" 
+          class="inline-block bg-red-700 text-white px-6 py-3 rounded font-semibold hover:bg-yellow-400 hover:text-red-700 transition"
+        >
+          View Menu
+        </a>
+      </div>
     </div>
   </section>
+
 </Layout>

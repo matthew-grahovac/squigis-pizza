@@ -2,51 +2,169 @@
 import Layout from "../layouts/BaseLayout.astro";
 ---
 
-<Layout title="Squigi's Pizza of Griffith">
-  <section class="bg-red-700 text-white">
-    <div class="mx-auto max-w-6xl px-4 py-16 text-center">
-		<h1 class="text-4xl md:text-5xl font-bold mb-4">
-		Squigi’s Pizza of Griffith
-		</h1>
-		<p class="text-lg mb-6">
-		A Griffith favorite serving classic pizza, sandwiches, and Italian comfort food.
-		</p>
-		<div class="flex justify-center gap-4 flex-wrap">
-		<a
-			href="./menu"
-			class="bg-white text-red-700 px-6 py-3 rounded font-semibold"
-		>
-			View Menu
-		</a>
+<Layout title="Squigi’s Pizza of Griffith">
 
-		<a
-			href="tel:2199246000"
-			class="border border-white px-6 py-3 rounded font-semibold"
-		>
-			Order by Phone
-		</a>
+  <!-- Hero Section -->
+  <section class="relative bg-red-700 text-white h-[80vh] md:h-[90vh] overflow-hidden">
+    <!-- Background Image -->
+    <div class="absolute inset-0">
+      <img 
+        src="./images/pizza-hero.jpg" 
+        alt="Fresh pizza at Squigi’s Pizza of Griffith" 
+        class="w-full h-full object-cover opacity-30"
+      />
+    </div>
 
-		<a
-			href="./contact"
-			class="border border-white px-6 py-3 rounded font-semibold"
-		>
-			Location & Hours
-		</a>
-		</div>
+    <!-- Hero Content -->
+    <div class="relative z-10 max-w-6xl mx-auto px-4 py-28 text-center flex flex-col items-center justify-center">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-4 drop-shadow-lg">
+        🍕 Squigi’s Pizza of Griffith
+      </h1>
+      <p class="text-lg md:text-xl mb-4 drop-shadow">
+        Classic pizza, Italian favorites, and hometown service.
+      </p>
+      <p class="text-yellow-400 font-semibold mb-8 drop-shadow">
+        Try our Wednesday Special!
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/menu" class="bg-white text-red-700 px-6 py-3 rounded font-semibold hover:bg-yellow-400 transition">
+          View Menu
+        </a>
+        <a href="tel:15551234567" class="border border-white px-6 py-3 rounded font-semibold hover:bg-red-600 hover:text-white transition">
+          Order by Phone
+        </a>
+        <a href="/contact" class="border border-white px-6 py-3 rounded font-semibold hover:bg-red-600 hover:text-white transition">
+          Location & Hours
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </div>
   </section>
 
-  <section class="mx-auto max-w-6xl px-4 py-12 grid md:grid-cols-3 gap-8 text-center">
-    <div>
+  <!-- Highlights Section -->
+  <section class="max-w-6xl mx-auto px-4 py-16 grid md:grid-cols-3 gap-8 text-center">
+    <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg transition">
       <h3 class="font-bold text-lg mb-2">🍕 Fresh Pizza</h3>
-      <p>Made daily with house-made dough and sauce.</p>
+      <p>Made with quality ingredients and classic recipes.</p>
     </div>
-    <div>
-      <h3 class="font-bold text-lg mb-2">👨‍👩‍👧‍👦 Family Owned</h3>
+    <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-lg mb-2">👨‍👩‍👧‍👦 Family-Owned</h3>
       <p>Proudly serving the Griffith community.</p>
     </div>
-    <div>
+    <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg transition">
       <h3 class="font-bold text-lg mb-2">📍 Local Favorite</h3>
-      <p>Dine in, carryout, or call ahead.</p>
+      <p>Dine in, carry out, or get it delivered.</p>
     </div>
   </section>
+
+    <!-- Featured Pizzas / Gallery Section -->
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-center mb-12">Pizza</h2>
+
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <!-- Pizza Card 1 -->
+      <div class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
+        <img src="./images/pizza-1.jpg" alt="Pepperoni Pizza" class="w-full h-48 object-cover" />
+        <div class="p-4 text-center">
+          <h3 class="font-semibold text-lg mb-1">Wednesday Special</h3>
+          <p class="text-neutral-600 text-sm">Some description here.</p>
+        </div>
+      </div>
+
+      <!-- Pizza Card 2 -->
+      <div class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
+        <img src="./images/pizza-2.jpg" alt="Supreme" class="w-full h-48 object-cover" />
+        <div class="p-4 text-center">
+          <h3 class="font-semibold text-lg mb-1">Supreme</h3>
+          <p class="text-neutral-600 text-sm">Some other description.</p>
+        </div>
+      </div>
+
+      <!-- Pizza Card 3 -->
+      <div class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
+        <img src="./images/pizza-heart.jpg" alt="Heart-Shaped" class="w-full h-48 object-cover" />
+        <div class="p-4 text-center">
+          <h3 class="font-semibold text-lg mb-1">Heart-Shaped</h3>
+          <p class="text-neutral-600 text-sm">This picture doesn't really fit.</p>
+        </div>
+      </div>
+
+      <!-- Optional additional pizzas -->
+      <!--
+      <div class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
+        <img src="/images/pizza4.jpg" alt="Hawaiian Pizza" class="w-full h-48 object-cover" />
+        <div class="p-4 text-center">
+          <h3 class="font-semibold text-lg mb-1">Hawaiian Pizza</h3>
+          <p class="text-neutral-600 text-sm">Ham, pineapple, and gooey mozzarella.</p>
+        </div>
+      </div>
+      -->
+    </div>
+  </section>
+
+    <!-- Interior / Gallery Section -->
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-center mb-12">Gallery</h2>
+
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <!-- Interior Image 1 -->
+      <div class="overflow-hidden rounded-lg shadow hover:shadow-lg transition">
+        <img src="./images/gallery-1.jpg" alt="Restaurant interior" class="w-full h-70 object-cover hover:scale-105 transition-transform duration-300" />
+      </div>
+
+      <!-- Interior Image 2 -->
+      <div class="overflow-hidden rounded-lg shadow hover:shadow-lg transition">
+        <img src="./images/gallery-2.jpg" alt="Cozy seating area" class="w-full h-70 object-cover hover:scale-105 transition-transform duration-300" />
+      </div>
+
+      <!-- Interior Image 3 -->
+      <div class="overflow-hidden rounded-lg shadow hover:shadow-lg transition">
+        <img src="./images/gallery-3.jpg" alt="Family dining" class="w-full h-70 object-cover hover:scale-105 transition-transform duration-300" />
+      </div>
+
+      <!-- Optional additional images -->
+      <!--
+      <div class="overflow-hidden rounded-lg shadow hover:shadow-lg transition">
+        <img src="/images/interior4.jpg" alt="Staff preparing pizza" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300" />
+      </div>
+      -->
+    </div>
+  </section>
+
+    <!-- Final Call to Action Section -->
+  <section class="bg-red-700 text-white py-16">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        Hungry? Let’s get you some pizza! 🍕
+      </h2>
+      <p class="text-lg mb-8">
+        Dine-in, carryout, or delivery — your favorite pizza is just a call away.
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-4">
+        <a 
+          href="./menu" 
+          class="bg-white text-red-700 px-6 py-3 rounded font-semibold hover:bg-yellow-400 transition"
+        >
+          View Menu
+        </a>
+        <a 
+          href="tel:2199246000" 
+          class="border border-white px-6 py-3 rounded font-semibold hover:bg-red-600 hover:text-white transition"
+        >
+          Call to Order
+        </a>
+      </div>
+    </div>
+  </section>
+
+
 </Layout>
