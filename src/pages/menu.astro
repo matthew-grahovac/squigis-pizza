@@ -1,42 +1,30 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import "../styles/global.css";
+import Layout from "../layouts/BaseLayout.astro";
 ---
 
+<Layout title="Menu | Squigi's Pizza of Griffith">
+  <section class="mx-auto max-w-4xl px-4 py-10 text-center">
+    <h1 class="text-3xl font-bold mb-2">Our Menu</h1>
+    <p class="text-neutral-600 mb-6">Tap or pinch to zoom</p>
 
-<Layout title="Menu">
-  <section class="menu-page">
-    <h1>Our Menu</h1>
-    <p class="hint">Tap or pinch to zoom</p>
-
-    <div class="menu-image">
+    <div class="space-y-8">
       <img
-        src="/squigis-pizza/images/menu-front.jpg"
-        alt="Pizza Menu"
-        loading="eager"
+        src="./images/menu-front.jpg"
+        alt="Pizza Menu Front"
+        class="w-full rounded-lg shadow"
+      />
+
+      <img
+        src="./images/menu-page-1.jpg"
+        alt="Pizza Menu Page 1"
+        class="w-full rounded-lg shadow"
+      />
+
+      <img
+        src="./images/menu-page-2.jpg"
+        alt="Pizza Menu Page 2"
+        class="w-full rounded-lg shadow"
       />
     </div>
-
-    <div class="menu-image">
-      <img
-        src="/squigis-pizza/images/menu-page-1.jpg"
-        alt="Pizza Menu"
-        loading="eager"
-      />
-    </div>
-
-        <div class="menu-image">
-      <img
-        src="/squigis-pizza/images/menu-page-2.jpg"
-        alt="Pizza Menu"
-        loading="eager"
-      />
-    </div>
-    <!-- Optional PDF link -->
-    <!--
-    <p class="download">
-      <a href="/menu.pdf" target="_blank">Download PDF</a>
-    </p>
-    -->
   </section>
 </Layout>
